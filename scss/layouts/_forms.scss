@@ -1,0 +1,106 @@
+.form-field {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.form-label {
+  position: absolute;
+  top: 16px;
+  left: 42px;
+  /* transition: transform 0.3s; */
+}
+
+/* 2 Варианта для текста в input
+когда фокус внутри на єлементе 
+.form-field:focus-within .form-label {
+  transform: translate(-36px, -40px);
+} */
+/* Когда label стоит после input
+.form-input:focus + .form-label {
+  transform: translate(-36px, -40px);
+} */
+
+.form-label {
+  display: block;
+}
+
+.form-input {
+  padding: 16px 42px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.17;
+  border: 1px solid var(--color-secondary-brown);
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+.form-input:focus {
+  border-color: var(--color-brand-normal);
+  outline: none;
+}
+/* 
+.form-input:disabled {
+  border-color: lightgray;
+}
+
+.form-input:disabled::placeholder {
+  color: lightgray;
+} */
+
+.form-input::placeholder {
+  color: var(--color-secondary-brown);
+  font-size: 16px;
+  line-height: 1.17;
+}
+
+.form-input:focus::placeholder {
+  color: var(--color-primary-dark);
+}
+
+.form-button {
+  display: block;
+  margin: 0 auto 24px;
+}
+
+.form-terms {
+  margin: 0 auto;
+  max-width: 220px;
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+}
+
+.form-terms-link {
+  color: var(--color-primary-dark);
+  text-underline-offset: 2px;
+}
+
+/*  Тестовый стилизированый чексбокс
+.checkbox {
+  position: relative;
+}
+
+.checkbox-input {
+  appearance: none;
+}
+
+.checkbox-input:checked + .checkbox-label::before {
+  background-color: var(--color-brand-normal);
+}
+
+.checkbox-label{
+padding-left: 24px;
+}
+
+.checkbox-label::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 5px;
+  border: 1px solid var(--color-primary-dark);
+  border-radius: 2px;
+  content: "";
+}
+*/
