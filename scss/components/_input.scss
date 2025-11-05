@@ -1,0 +1,84 @@
+.input {
+  position: relative;
+
+  &__label {
+    position: absolute;
+    display: block;
+    top: 16px;
+    left: 42px;
+    /* transition: transform 0.3s; */
+  }
+
+  /* 2 Варианта для текста в input
+    когда фокус внутри на єлементе 
+    &:focus-within .form-label {
+      transform: translate(-36px, -40px);
+    } */
+  /* Когда label стоит после input
+    &:focus + .form-label {
+      transform: translate(-36px, -40px);
+    } */
+
+  &__control {
+    padding: 16px 42px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.17;
+    border: 1px solid var(--color-secondary-brown);
+    border-radius: 8px;
+    background-color: transparent;
+
+    &:focus {
+      border-color: var(--color-brand-normal);
+      outline: none;
+    }
+    /* 
+    &:disabled {
+      border-color: lightgray;
+    }
+    
+    &:disabled::placeholder {
+      color: lightgray;
+    } */
+
+    &::placeholder {
+      color: var(--color-secondary-brown);
+      font-size: 16px;
+      line-height: 1.17;
+    }
+
+    &:focus::placeholder {
+      color: var(--color-primary-dark);
+    }
+  }
+}
+
+/*  Тестовый стилизированый чексбокс
+.checkbox {
+  position: relative;
+}
+
+.checkbox-input {
+  appearance: none;
+}
+
+.checkbox-input:checked + .checkbox-label::before {
+  background-color: var(--color-brand-normal);
+}
+
+.checkbox-label{
+padding-left: 24px;
+}
+
+.checkbox-label::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 5px;
+  border: 1px solid var(--color-primary-dark);
+  border-radius: 2px;
+  content: "";
+}
+*/
