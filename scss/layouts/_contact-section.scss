@@ -1,9 +1,19 @@
 .contact-section {
-  padding-bottom: 96px;
+  padding-bottom: 0;
+
+  @media screen and (min-width: $bp-tablet) {
+    padding-bottom: 96px;
+  }
 
   &__container {
     display: flex;
-    gap: 32px;
+    flex-direction: column;
+    gap: 24px;
+
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+      gap: 32px;
+    }
   }
 
   &__title {
@@ -11,17 +21,46 @@
   }
 
   &__form-field {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
+
+    @media screen and (min-width: $bp-tablet) {
+      margin-bottom: 24px;
+    }
   }
 
   &__button {
     display: block;
-    margin: 0 auto 16px;
+    margin: 0 auto;
+
+    @media screen and (min-width: $bp-tablet) {
+      margin: 0 auto 16px;
+    }
+  }
+
+  &__terms {
+    display: none;
+
+    @media screen and (min-width: $bp-tablet) {
+      display: block;
+    }
   }
 
   &__map {
     flex-shrink: 0;
+    height: 176px;
+    margin: 0 -24px;
     border: none;
     border-radius: 16px;
+
+    @media screen and (min-width: $bp-tablet) {
+      width: 320px;
+      height: 500px;
+      margin: auto;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      width: 600px;
+      height: 595px;
+    }
   }
 }

@@ -20,7 +20,7 @@
     } */
 
   &__control {
-    padding: 16px 42px;
+    padding: 8px 24px;
     width: 100%;
     font-size: 16px;
     line-height: 1.17;
@@ -32,6 +32,11 @@
       border-color: var(--color-brand-normal);
       outline: none;
     }
+
+    @media screen and (min-width: $bp-tablet) {
+      padding: 16px 42px;
+    }
+
     /* 
     &:disabled {
       border-color: lightgray;
